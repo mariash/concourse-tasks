@@ -1,0 +1,13 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source: 
+    repository: concourse/bin-ci
+
+outputs:
+- name: out
+
+run:
+  path: sh
+  args: ['-c', 'echo ok > out/name']
